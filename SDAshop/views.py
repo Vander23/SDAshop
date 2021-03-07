@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
@@ -27,3 +28,7 @@ def co_sprzedajemy(request):
 
 def zwroty(request):
     return render(request, 'zwroty.html')
+
+@login_required
+def panel(request):
+    return render(request, 'home.html')
