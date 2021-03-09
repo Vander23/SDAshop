@@ -1,3 +1,5 @@
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render
 from .models import Brand, CarModel, Product
 
@@ -27,6 +29,11 @@ def co_sprzedajemy(request):
 
 def zwroty(request):
     return render(request, 'zwroty.html')
+
+
+@login_required
+def panel(request):
+    return render(request, 'home.html')
 
 def all_products(request):
     products = Product.objects.all()

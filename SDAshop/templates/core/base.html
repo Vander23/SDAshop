@@ -20,9 +20,12 @@
         	<a>Sklep internetowy</a>
         </div>
         <div id="login">
+            Użytkownik: {{ user.username }}
             <ul>
-            <li><a href="">ZAREJESTRUJ SIĘ</a></li>
-            <li><a href="#">ZALOGUJ SIĘ</a></li>
+            <li><a href="{% url 'signup' %}">ZAREJESTRUJ SIĘ</a></li>
+            <li><a href="{% url 'login' %}">ZALOGUJ SIĘ</a></li>
+            <li><a href="{% url 'logout' %}">WYLOGUJ SIĘ</a></li>
+            <li><a href="{% url 'settings' %}">USTAWIENIA</a></li>
             </ul>
         </div>
         <div id="header_menu">
