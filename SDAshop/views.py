@@ -42,4 +42,3 @@ def all_products(request):
 def product_details(request, id):
     product = get_object_or_404(Product, id=id, in_stock=True)
     return render(request, 'single_product.html', {'product': product})
-

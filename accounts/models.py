@@ -5,4 +5,3 @@ from django.urls import reverse
 
 class Profile(User):
     pass
-
