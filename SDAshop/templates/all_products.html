@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %} {% load static %}
+
+{% block site_title %}
+
+All products
+
+{% endblock %}
+
+{% block text_area %}
+<ul>
+    {% for product in products %}
+        <p>
+            <img src="{{ product.image.url }}">
+            <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+        </p>
+    {% endfor %}
+</ul>
+{% endblock %}
