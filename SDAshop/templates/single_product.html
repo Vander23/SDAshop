@@ -2,7 +2,7 @@
 
 {% block site_title %}
 
-Product details
+<h1>Informacje o samochodzie</h1>
 
 {% endblock %}
 
@@ -11,9 +11,14 @@ Product details
     <img src="{{ product.image.url }}">
 </div>
 <div>
-    <h1>{{ product.title }} </h1>
-    <p>{{product.brand_name}}</p>
-    <p>{{product.car_model}}</p>
-    <p>{{product.description}}</p>
+    <h1>{{ product.title }}</h1>
+    <p><b>Marka:</b> {{product.brand_name}}</p>
+    <p><b>Model:</b> {{product.car_model}}</p>
+    <p><b>Rok produkcji:</b> {{product.year_of_production}}</p>
+    <p><b>Moc silnika:</b> {{product.engine}}</p>
+    <p><b>Rodzaj paliwa:</b> {{product.fuel_type}}</p>
+    <p><b>Opis:</b> {{product.description}}</p>
+    <h2><b>Cena:</b> {{product.price}} zł</h2>
+    </table>
 </div>
 {% endblock %}

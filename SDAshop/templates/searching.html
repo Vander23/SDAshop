@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %} {% load static %}
+
+{% block site_title %}
+
+{% endblock %}
+
+{% block text_area %}
+
+
+  <p>JAKIEGO SAMOCHODU SZUKASZ?</p>
+  <p>
+  <label for="filtr">Marka:</label>
+  <select id="filtr">
+    <option value="Wybierz">Wybierz...</option>
+    <option # </option>
+  </select>
+</p>
+
+<p>
+  <label for="filtr">Model:</label>
+  <select id="filtr">
+    <option value="Wybierz">Wybierz...</option>
+    <option # </option>
+
+  </select>
+</p>
+
+<a href="#table"><img src="{% static 'images/wyszukaj.jpg' %}" style="width:10%"></a>
+
+
+<p>
+
+<ul>
+    {% for product in products %}
+        <p>
+            <img src="{{ product.image.url }}">
+            <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+        </p>
+    {% endfor %}
+</ul>
+
+  </p>
+
+
+ {% endblock %}

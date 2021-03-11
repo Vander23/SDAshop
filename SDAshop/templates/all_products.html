@@ -9,10 +9,17 @@ All products
 {% block text_area %}
 <ul>
     {% for product in products %}
-        <p>
-            <img src="{{ product.image.url }}">
-            <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
-        </p>
+    <p>
+    <table>
+   <tr>
+      <td><img src="{{ product.image }}"></td>
+       <td><a href="{{ product.get_absolute_url }}">{{ product.title }}</td>
+       <td>CENA: {{ product.price }} zł </a></td>
+   </tr>
+    </table>
+    </p>
+
+
     {% endfor %}
 </ul>
 {% endblock %}

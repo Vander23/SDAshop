@@ -6,29 +6,15 @@ from .models import Brand, CarModel, Product
 def home(request):
     return render(request, 'home.html')
 
-def produkt1(request):
-    return render(request, 'produkt1.html')
 
-def produkt2(request):
-    return render(request, 'produkt2.html')
+def searching(request):
+    return render(request, 'searching.html')
 
-def produkt3(request):
-    return render(request, 'produkt3.html')
+def add(request):
+    return render(request, 'add.html')
 
-def informacje_o_zamowieniu(request):
-    return render(request, 'infozam.html')
-
-def reklamacje(request):
-    return render(request, 'reklamacje.html')
-
-def kontakt(request):
-    return render(request, 'kontakt.html')
-
-def co_sprzedajemy(request):
-    return render(request, 'cosprzedajemy.html')
-
-def zwroty(request):
-    return render(request, 'zwroty.html')
+def contact(request):
+    return render(request, 'contact.html')
 
 
 @login_required

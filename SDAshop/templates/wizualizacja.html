@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %} {% load static %}
+
+{% block site_title %}
+
+wizualizacja
+
+{% endblock %}
+
+{% block text_area %}
+
+
+<fieldset>
+    <a class="gallery" href="#"></a><img src="{% static 'images/car.jpg' %}" width="10%" alt="Pierwsza miniaturka">
+    <a class="gallery" href="#"><img src="{% static 'images/car2.jpg' %}" width="10% alt="Druga miniaturka"></a>
+    <a class="gallery" href="#"><img src="{% static 'images/car.jpg' %}" width="10% alt="Trzecia miniaturka"></a>
+    <a class="gallery" href="#"><img src="{% static 'images/car.jpg' %}" width="10% alt="Czwarta miniaturka"></a>
+    <a class="gallery" href="#"><img src="{% static 'images/car2.jpg' %}" width="10% alt="Piąta miniaturka"></a>
+<fieldset>
+
+    <div id="car_description">
+      <h1>nazwa samochodu</h1>
+      <h2>SPECYFIKACJE:</h2>
+      <h3>wylistowane specyfikacje</h3>
+      <h2>OPIS SAMOCHODU: </h2>
+      <p>opis samochodu przez użytkownika</p>
+    </div>
+  </fieldset>
+  <fieldset>
+    <h1>CENA:</h1>
+    <h2>169.595zł</h2>
+    <h1>Kontakt:</h1>
+    <h2>+48598652175</h2>
+    <a href="#"><img src="{% static 'images/button.png' %} " style="width:10%"></a></a>
+    <a href="#"><p><b><u>Kup teraz</a></p></b></u>
+  
+  </fieldset>
+</fieldset>
+
+{% endblock %}
