@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +28,7 @@
             <ul>
                 {% else %}
                 <li><a href="{% url 'logout' %}">WYLOGUJ SIĘ</a></li>
-                <li><a href="{% url 'settings' %}">USTAWIENIA</a></li>
+
                     {% if user.is_staff %}
                     <li><a href="admin/">PANEL ADMINA</a></li>
                     {% endif %}

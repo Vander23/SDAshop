@@ -6,5 +6,5 @@ from .models import UserProfile
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ['user', 'first_name', 'last_name', 'email', 'nip_number', 'phone_number', 'delivery_address',
+    list_display = ['user', 'nip_number', 'phone_number', 'delivery_address',
                     'bank_account_number']

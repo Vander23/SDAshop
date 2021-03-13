@@ -2,14 +2,15 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.views import generic
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth.decorators import login_required
-from . import forms
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password, check_password
 from django.contrib.auth import update_session_auth_hash
+from . import forms
+from . import models
 
 
 class SignUp(generic.CreateView):
-    form_class = forms.ProfileForm
+    form_class = forms.ProfileCreateForm
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
 
