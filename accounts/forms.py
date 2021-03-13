@@ -1,11 +1,16 @@
 from django import forms
-from django.contrib.auth.models import User
+from . import models
+from django.contrib.auth.forms import UserCreationForm
+
+
+class ProfileForm(UserCreationForm):
+    phone_number = forms.IntegerField()
 
 
 class UserBasicDataChangeForm(forms.ModelForm):
     class Meta:
-        model = User
-        fields = ['first_name', 'last_name', 'email']
+        model = models.UserProfile
+        fields = ['first_name', 'last_name', 'phone_number']
 
 
 class UserPasswordChangeForm(forms.Form):

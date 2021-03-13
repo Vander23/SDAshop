@@ -19,13 +19,19 @@
             <a href="{% url 'home' %}"></a><img src="{% static 'images/super_logo.png'%}" style="width:30%"></a>
         <div id="login_1">
             <ul>
+                {% if not user.is_authenticated %}
                 <li><a href="{% url 'login' %}">ZALOGUJ SIĘ</a></li>
+                <li><a href="{% url 'signup' %}">ZAREJESTRUJ SIĘ</a></li>
             </ul>
         <div id="login_2">
             <ul>
-                <li><a href="{% url 'signup' %}">ZAREJESTRUJ SIĘ</a></li>
+                {% else %}
                 <li><a href="{% url 'logout' %}">WYLOGUJ SIĘ</a></li>
                 <li><a href="{% url 'settings' %}">USTAWIENIA</a></li>
+                    {% if user.is_staff %}
+                    <li><a href="admin/">PANEL ADMINA</a></li>
+                    {% endif %}
+                {% endif %}
             </ul>
 
         </div>
@@ -96,6 +102,13 @@
     </div>
     </div>
     <script src="{% static 'js/index.js' %}"></script>
+
+    <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+
 </body>
 </html>
 
